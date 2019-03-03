@@ -1,0 +1,13 @@
+radio.onDataPacketReceived( ({ receivedString: komando }) =>  {
+    if (komando == "vorne") {
+        motors.dualMotorPower(Motor.A, 85)
+        motors.dualMotorPower(Motor.B, 100)
+    } else if (komando == "links") {
+        motors.dualMotorPower(Motor.A, 85)
+    } else if (komando == "rechts") {
+        motors.dualMotorPower(Motor.B, 100)
+    } else if (komando == "stop") {
+        motors.dualMotorPower(Motor.AB, 0)
+    }
+})
+radio.setGroup(0)

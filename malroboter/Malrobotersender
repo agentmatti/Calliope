@@ -1,0 +1,75 @@
+let zufall = 0
+let Zähler = 0
+radio.setGroup(0)
+radio.setTransmitPower(7)
+basic.forever(() => {
+    if (input.buttonIsPressed(Button.AB)) {
+        radio.sendString("vorne")
+    } else if (input.buttonIsPressed(Button.A)) {
+        radio.sendString("links")
+    } else if (input.buttonIsPressed(Button.B)) {
+        radio.sendString("rechts")
+    } else if (input.pinIsPressed(TouchPin.P0)) {
+        Zähler = Math.random(7)
+        Zähler += 4
+        while (Zähler > 0) {
+            zufall = Math.random(3)
+            if (zufall == 0) {
+                radio.sendString("vorne")
+            } else if (zufall == 1) {
+                radio.sendString("links")
+            } else if (zufall == 2) {
+                radio.sendString("rechts")
+            }
+            basic.pause(1500)
+            radio.sendString("stop")
+            basic.pause(1000)
+            Zähler += -1
+        }
+        radio.sendString("stop")
+    } else if (input.pinIsPressed(TouchPin.P1)) {
+        for (let i = 0; i < 1; i++) {
+            zufall = Math.random(3)
+            if (zufall == 0) {
+                radio.sendString("vorne")
+            } else if (zufall == 1) {
+                radio.sendString("links")
+            } else if (zufall == 2) {
+                radio.sendString("rechts")
+            }
+            basic.pause(1500)
+            radio.sendString("stop")
+            basic.pause(1000)
+        }
+    } else if (input.pinIsPressed(TouchPin.P2)) {
+        for (let i = 0; i < 2; i++) {
+            zufall = Math.random(3)
+            if (zufall == 0) {
+                radio.sendString("vorne")
+            } else if (zufall == 1) {
+                radio.sendString("links")
+            } else if (zufall == 2) {
+                radio.sendString("rechts")
+            }
+            basic.pause(1500)
+            radio.sendString("stop")
+            basic.pause(1000)
+        }
+    } else if (input.pinIsPressed(TouchPin.P3)) {
+        for (let i = 0; i < 3; i++) {
+            zufall = Math.random(3)
+            if (zufall == 0) {
+                radio.sendString("vorne")
+            } else if (zufall == 1) {
+                radio.sendString("links")
+            } else if (zufall == 2) {
+                radio.sendString("rechts")
+            }
+            basic.pause(1500)
+            radio.sendString("stop")
+            basic.pause(1000)
+        }
+    } else {
+        radio.sendString("stop")
+    }
+})
