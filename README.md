@@ -1,6 +1,7 @@
 # Calliope
 
 ## Schere Stein Papier
+Das Projekt wird mit OpenRoberta bearbeitet https://lab.open-roberta.org/.
 
 ## Schere Stein Papier zu zweit
 
