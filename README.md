@@ -9,6 +9,8 @@ Ein Calliope wird mit den Motoren des Autos verbunden. Mit dem zweiten Calliope 
 Die Datei wird mit dem https://makecode.calliope.cc bearbeitet.
 ## Malroboter
 Die Datei wird mit dem https://makecode.calliope.cc bearbeitet.
+## Binary Counter
+Das Calliope zählt in Binär hoch bis 65535(2 byte, 16 bit)
 
 
 
